@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KurirDirectoryApp</string>
+    <string name="header_title">Direktori Kurir</string>
+    <string name="header_description">Cari dan temukan informasi kontak kurir</string>
+    <string name="search_hint">Cari nama atau perusahaan kurir...</string>
+    <string name="empty_message">Tidak ada kurir yang cocok dengan pencarian Anda</string>
+    <string name="dummy_name">Nama Kurir</string>
+    <string name="dummy_company">Nama Perusahaan</string>
+    <string name="dummy_email">Email</string>
+    <string name="dummy_phone">Telepon</string>
+</resources>

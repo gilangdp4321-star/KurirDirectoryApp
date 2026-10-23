@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Header Judul & Subjudul -->
+    <TextView
+        android:id="@+id/textViewHeaderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/header_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewHeaderDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/header_description"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- EditText untuk Pencarian Live -->
+    <EditText
+        android:id="@+id/editTextSearchName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/search_hint"
+        android:inputType="text"
+        android:padding="12dp"
+        android:autofillHints="name" />
+
+    <!-- ProgressBar untuk Indikator Loading -->
+    <ProgressBar
+        android:id="@+id/progressBarLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:visibility="gone" />
+
+    <!-- TextView untuk Pesan Error Koneksi / Server -->
+    <TextView
+        android:id="@+id/textViewErrorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="gone"
+        tools:text="Gagal terhubung ke server" />
+
+    <!-- TextView untuk Tugas Mandiri 2 (State Hasil Filter Kosong) -->
+    <TextView
+        android:id="@+id/textViewEmptyMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/empty_message"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- RecyclerView untuk Menampilkan Daftar Kurir -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewUsers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        tools:listitem="@layout/item_kurir" />
+
+</LinearLayout>
